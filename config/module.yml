@@ -1,0 +1,3 @@
+build:
+  cmake-ext-modules:
+    - ../prospector-zmk-module
