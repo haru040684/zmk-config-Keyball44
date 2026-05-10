@@ -8,3 +8,4 @@ include:
     shield: settings_reset
   - board: seeeduino_xiao_ble
     shield: prospector
+    cmake-args: -DZEPHYR_EXTRA_MODULES=prospector-zmk-module
