@@ -14,7 +14,7 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: tangbonze
       revision: main
-- name: prospector-zmk-module
+    - name: prospector-zmk-module
       remote: carrefinho
       revision: main
       import: true
