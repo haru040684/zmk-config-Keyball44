@@ -1,0 +1,4 @@
+layout: {zmk_keyboard: keyball44_dongle}
+layers:
+  default:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
