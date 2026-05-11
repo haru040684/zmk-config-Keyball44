@@ -1,5 +1,12 @@
-#include "keyball44.dtsi"
+/ {
+    chosen {
+        zmk,kscan = &kscan_mock;
+    };
 
-&default_transform {
-    col-offset = <0>;
+    kscan_mock: kscan_mock {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
 };
