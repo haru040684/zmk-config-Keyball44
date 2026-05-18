@@ -29,7 +29,6 @@
 
 / {
     behaviors {
-
         td_layer_up: tap_dance_layer_up {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LAYER_UP";
@@ -51,7 +50,7 @@
             label = "TD_NUMPAD";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&tog NUMPAD>, <&mo NUMPAD>;
+            bindings = <&tog NUMPAD>, <&tog NUMPAD>;
         };
     };
 
@@ -61,70 +60,70 @@
         base_layer {
             label = "BASE";
             bindings = 
-&none      &kp Q     &kp W         &kp E         &kp R      &kp T                    &kp Y    &kp U      &kp I      &kp O    &kp P     &kp ESC
-&kp LSHFT  &kp A     &kp S         &kp D         &kp F      &kp G                    &kp H    &kp J      &kp K      &kp L    &kp SQT   &none
-&kp LGUI   &kp Z     &kp X         &kp C         &kp V      &kp B                    &kp N    &kp M      &kp COMMA  &kp DOT  &kp SEMI  &none
-&none      &kp LALT  &td_layer_up  &td_layer_dn  &kp SPACE  &kp BSPC  &kp LALT      &kp DEL  &kp ENTER                               &td_numpad
+&kp TAB    &kp Q     &kp W         &kp E         &kp R      &kp T              &kp Y    &kp U      &kp I      &kp O    &kp P     &kp ESC
+&kp LSHFT  &kp A     &kp S         &kp D         &kp F      &kp G              &kp H    &kp J      &kp K      &kp L    &kp SQT   &kp FSLH
+&kp LGUI   &kp Z     &kp X         &kp C         &kp V      &kp B              &kp N    &kp M      &kp COMMA  &kp DOT  &kp SEMI  &kp RSHFT
+&td_layer_up  &td_layer_dn  &kp SPACE  &kp BSPC  &kp LCTRL              &kp LALT  &kp ENTER                          &mo NUMPAD
             >;
         };
 
         numpad_layer {
             label = "NUMPAD";
             bindings = 
-&kp PLUS   &kp N7  &kp N8        &kp N9        &kp SLASH     &none                      &none  &none  &none      &none     &kp UP    &none
-&kp MINUS  &kp N4  &kp N5        &kp N6        &kp ASTERISK  &none                      &none  &none  &none      &kp LEFT  &kp DOWN  &none
-&kp N0     &kp N1  &kp N2        &kp N3        &kp DOT       &none                      &none  &none  &none      &none     &kp RIGHT &none
-&none      &none   &td_layer_up  &td_layer_dn  &kp ENTER     &kp LEFT  &kp RIGHT        &none  &none                                &td_numpad
+&kp EQUAL  &kp N7  &kp N8        &kp N9  &kp SLASH     &kp LSHFT          &none  &none  &none  &none  &kp ESC   &none
+&kp MINUS  &kp N4  &kp N5        &kp N6  &kp N8        &kp LGUI           &none  &none  &kp UP  &kp DOWN  &kp RIGHT  &kp LSHFT
+&kp N0     &kp N1  &kp N2        &kp N3  &kp DOT       &kp EQUAL          &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &kp LGUI
+&td_layer_up  &td_layer_dn  &kp ENTER  &kp LEFT  &kp RIGHT              &none  &none                  &tog NUMPAD
             >;
         };
 
         mouse_layer {
             label = "MOUSE";
             bindings = 
-&none  &none  &none         &none         &none   &none              &none      &none      &none       &none      &none      &none
-&none  &none  &none         &none         &none   &none              &kp PG_UP  &mkp LCLK  &mo SCROLL  &mkp RCLK  &mkp MCLK  &none
-&none  &none  &none         &none         &none   &none              &kp PG_DN  &none      &none       &none      &none      &none
-&none  &none  &td_layer_up  &td_layer_dn  &trans  &trans  &trans    &trans     &trans                                        &none
+&none  &none  &none  &none  &none  &none              &none      &none      &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none      &none      &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none      &none      &none  &none  &none  &none
+&none  &none  &none  &none  &none              &mkp RCLK  &mkp LCLK              &none
             >;
         };
 
         resolve_layer {
             label = "RESOLVE";
             bindings = 
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &td_layer_up  &td_layer_dn  &none  &none  &none      &none  &none                       &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none              &none  &none              &none
             >;
         };
 
         ae_layer {
             label = "AE";
             bindings = 
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &td_layer_up  &td_layer_dn  &none  &none  &none      &none  &none                       &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none              &none  &none              &none
             >;
         };
 
         ps_layer {
             label = "PS";
             bindings = 
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &td_layer_up  &td_layer_dn  &none  &none  &none      &none  &none                       &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none              &none  &none              &none
             >;
         };
 
         logic_layer {
             label = "LOGIC";
             bindings = 
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &none         &none         &none  &none              &none  &none  &none  &none  &none  &none
-&none  &none  &td_layer_up  &td_layer_dn  &none  &none  &none      &none  &none                       &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none              &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none              &none  &none              &none
             >;
         };
 
@@ -134,7 +133,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans              &trans  &trans                                  &trans
             >;
         };
     };
