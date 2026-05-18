@@ -1,3 +1,5 @@
+#include "keyball44.dtsi"
+
 / {
     chosen {
         zmk,kscan = &kscan_mock;
