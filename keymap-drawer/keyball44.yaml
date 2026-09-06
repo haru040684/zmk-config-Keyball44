@@ -41,7 +41,7 @@ layers:
   - '&td_layer_dn'
   - $$mdi:apple-keyboard-control$$
   - $$mdi:keyboard-space$$
-  - '&kpBSPC'
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - NUMPAD
