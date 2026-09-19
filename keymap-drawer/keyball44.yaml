@@ -41,7 +41,7 @@ layers:
   - '&td_layer_dn'
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:backspace$$', type: backspace}
-  - CTRL
+  - $$mdi:apple-keyboard-control$$
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - NUMPAD
