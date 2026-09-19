@@ -71,7 +71,7 @@
             label = "NUMPAD";
             bindings = <
 &kp EQUAL  &kp N7  &kp N8        &kp N9     &kp SLASH     &kp LSHFT                     &none      &none     &none     &none      &none     &kp ESC
-&kp MINUS  &kp N4  &kp N5        &kp N6     &kp N8        &kp LGUI                      &none      &none     &kp UP    &kp LBRC   &kp RBRC  &kp RSHFT
+&kp MINUS  &kp N4  &kp N5        &kp N6     &kp N8        &kp LGUI                      &none      &none     &kp UP    &kp LBRC   &kp LBKT  &kp RBKT
 &kp N0     &kp N1  &kp N2        &kp N3     &kp DOT       &kp EQUAL                     &kp GRAVE  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none
            &td_layer_up  &td_layer_dn       &kp ENTER     &kp LEFT      &kp RIGHT       &none  &none                  &tog NUMPAD
             >;
