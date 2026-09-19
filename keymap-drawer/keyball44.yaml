@@ -75,7 +75,7 @@ layers:
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - {t: ., s: '>'}
-  - {t: '=', s: +}
+  - {t: '`', s: '~'}
   - {t: '`', s: '~'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
