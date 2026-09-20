@@ -4,13 +4,15 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: tangbonze
       url-base: https://github.com/tangbonze
+    - name: haru040684
+      url-base: https://github.com/haru040684
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: tangbonze
+      remote: haru040684
       revision: main
   self:
     path: config
