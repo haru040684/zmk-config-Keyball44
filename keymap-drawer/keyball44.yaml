@@ -85,8 +85,8 @@ layers:
   - '&td_layer_up'
   - '&td_layer_dn'
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-right-bold$$
+  - $$mdi:keyboard-space$$
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: NUMPAD, h: toggle, type: held}
